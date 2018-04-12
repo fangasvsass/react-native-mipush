@@ -8,6 +8,9 @@ import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.WritableMap;
 import com.xiaomi.mipush.sdk.MiPushMessage;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * Created by zzy on 16/8/13.
  * Date : 16/8/13 16:18
@@ -26,7 +29,9 @@ public class MIPushHelper {
             param.putString("title", miPushMessage.getTitle());
             param.putString("description", miPushMessage.getDescription());
             param.putString("content", miPushMessage.getContent());
-//        param.putMap("extra", (WritableMap) miPushMessage.getExtra());
+            Map hashMap=miPushMessage.getExtra();
+            param.putString("uri", (String) hashMap.get("uri"));
+            param.putString("event", (String) hashMap.get("event"));
             param.putString("category", miPushMessage.getCategory());
             param.putInt("notifyId", miPushMessage.getNotifyId());
             param.putInt("notifyType", miPushMessage.getNotifyType());
