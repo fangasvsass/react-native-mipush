@@ -36,7 +36,7 @@ public class MIPushReceiver extends PushMessageReceiver {
         Intent intent = new Intent();
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 
-        if(MIPushPackage.sReactContext == null) {
+        if(MIPushPackage.sReactContext.getCurrentActivity() == null) {
             // 将数据保存
             MIPushPackage.sMiPushMessage = miPushMessage;
 
