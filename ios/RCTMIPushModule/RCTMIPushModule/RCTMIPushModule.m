@@ -49,6 +49,12 @@ RCT_EXPORT_METHOD(unsetAccount:(NSString *)text)
     
     [MiPushSDK unsetAccount:text];
 }
+RCT_EXPORT_METHOD(getAllTopic :(RCTPromiseResolveBlock)resolve
+                  rejecter:(RCTPromiseRejectBlock)reject)
+{
+    NSArray*topic=[MiPushSDK getAllTopic];
+    resolve(topic);
+}
 
 - (void)miPushRequestSuccWithSelector:(NSString *)selector data:(NSDictionary *)data
 {

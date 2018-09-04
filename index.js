@@ -79,6 +79,10 @@ class MIPush extends NativeEventEmitter {
         MIPushModule.unsetAccount(text);
     }
 
+      getAllTopic = async () => {
+        return await MIPushModule.getAllTopic() 
+    }
+
     /**
      *
      * @param type
