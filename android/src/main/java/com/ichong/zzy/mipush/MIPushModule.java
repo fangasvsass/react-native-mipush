@@ -3,6 +3,8 @@ package com.ichong.zzy.mipush;
 import com.facebook.react.bridge.*;
 import com.xiaomi.mipush.sdk.MiPushClient;
 
+import java.util.List;
+
 /**
  * Created by zzy on 16/8/11.
  * Date : 16/8/11 13:22
@@ -27,6 +29,17 @@ public class MIPushModule extends ReactContextBaseJavaModule {
     public void unsetAlias(String text) {
 
         MiPushClient.unsetAlias(getReactApplicationContext(), text, null);
+    }
+
+    @ReactMethod
+    public void getAllTopic(Promise promise) {
+        WritableArray writableArray = new WritableNativeArray();
+        List<String> topics =MiPushClient.getAllTopic(getReactApplicationContext());
+        for(String topic:topics){
+            writableArray.pushString(topic);
+        }
+
+        promise.resolve(writableArray);
     }
 
     @ReactMethod
