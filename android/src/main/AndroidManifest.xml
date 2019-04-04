@@ -65,6 +65,11 @@
             </intent-filter>
         </receiver>
 
+        <activity
+            android:name=".PermissionActivity"
+            android:theme="@style/PermissionDialog"
+            android:label="" />
+
     </application>
 
 </manifest>

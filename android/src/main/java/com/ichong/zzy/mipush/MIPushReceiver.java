@@ -1,7 +1,10 @@
 package com.ichong.zzy.mipush;
 
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
+
 import com.facebook.react.modules.core.DeviceEventManagerModule;
 import com.xiaomi.mipush.sdk.MiPushMessage;
 import com.xiaomi.mipush.sdk.PushMessageReceiver;
@@ -77,5 +80,19 @@ public class MIPushReceiver extends PushMessageReceiver {
 
         MIPushPackage.sReactContext.getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class).emit(type, MIPushHelper.parsePushMessage(miPushMessage));
     }
+
+    @Override
+    public void onRequirePermissions(Context context, String[] permissions) {
+        super.onRequirePermissions(context, permissions);
+
+        if (Build.VERSION.SDK_INT >= 23 && context.getApplicationInfo().targetSdkVersion >= 23) {
+            Intent intent = new Intent();
+            intent.putExtra("permissions", permissions);
+            intent.setComponent(new ComponentName(context.getPackageName(), PermissionActivity.class.getCanonicalName()));
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS);
+            context.startActivity(intent);
+        }
+    }
+
 
 }
