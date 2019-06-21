@@ -32,6 +32,8 @@ public class MIPushHelper {
             Map hashMap=miPushMessage.getExtra();
             param.putString("uri", (String) hashMap.get("uri"));
             param.putString("event", (String) hashMap.get("event"));
+            param.putString("route_name", (String) hashMap.get("route_name"));
+            param.putString("route_params", (String) hashMap.get("route_params"));
             param.putString("category", miPushMessage.getCategory());
             param.putInt("notifyId", miPushMessage.getNotifyId());
             param.putInt("notifyType", miPushMessage.getNotifyType());
