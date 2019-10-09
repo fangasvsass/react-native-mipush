@@ -1,6 +1,6 @@
 {
   "name": "react-native-letote-xmpush",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "集成小米推送",
   "main": "index.js",
   "scripts": {
