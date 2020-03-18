@@ -9,7 +9,8 @@
 /* Begin PBXBuildFile section */
 		2BC4EF001DBDFDDD00715730 /* RCTMIPushModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BC4EEFF1DBDFDDD00715730 /* RCTMIPushModule.m */; };
 		2BC4EF011DBDFDDD00715730 /* RCTMIPushModule.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2BC4EEFE1DBDFDDD00715730 /* RCTMIPushModule.h */; };
-		4759A206234DE5C40068491F /* libMiPushSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4759A205234DE5C40068491F /* libMiPushSDK.a */; };
+		CE04D95B2421BBC30065A98E /* libMiPushApnsAckSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE04D9572421BBC30065A98E /* libMiPushApnsAckSDK.a */; };
+		CE04D95C2421BBC30065A98E /* libMiPushSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE04D95A2421BBC30065A98E /* libMiPushSDK.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,8 +30,10 @@
 		2BC4EEFB1DBDFDDD00715730 /* libRCTMIPushModule.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRCTMIPushModule.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BC4EEFE1DBDFDDD00715730 /* RCTMIPushModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCTMIPushModule.h; sourceTree = "<group>"; };
 		2BC4EEFF1DBDFDDD00715730 /* RCTMIPushModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCTMIPushModule.m; sourceTree = "<group>"; };
-		4759A204234DE5C40068491F /* MiPushSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiPushSDK.h; sourceTree = "<group>"; };
-		4759A205234DE5C40068491F /* libMiPushSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMiPushSDK.a; sourceTree = "<group>"; };
+		CE04D9572421BBC30065A98E /* libMiPushApnsAckSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMiPushApnsAckSDK.a; sourceTree = "<group>"; };
+		CE04D9582421BBC30065A98E /* MiPushApnsAckSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiPushApnsAckSDK.h; sourceTree = "<group>"; };
+		CE04D9592421BBC30065A98E /* MiPushSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiPushSDK.h; sourceTree = "<group>"; };
+		CE04D95A2421BBC30065A98E /* libMiPushSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMiPushSDK.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,7 +41,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4759A206234DE5C40068491F /* libMiPushSDK.a in Frameworks */,
+				CE04D95C2421BBC30065A98E /* libMiPushSDK.a in Frameworks */,
+				CE04D95B2421BBC30065A98E /* libMiPushApnsAckSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,8 +68,10 @@
 		2BC4EEFD1DBDFDDD00715730 /* RCTMIPushModule */ = {
 			isa = PBXGroup;
 			children = (
-				4759A205234DE5C40068491F /* libMiPushSDK.a */,
-				4759A204234DE5C40068491F /* MiPushSDK.h */,
+				CE04D9572421BBC30065A98E /* libMiPushApnsAckSDK.a */,
+				CE04D95A2421BBC30065A98E /* libMiPushSDK.a */,
+				CE04D9582421BBC30065A98E /* MiPushApnsAckSDK.h */,
+				CE04D9592421BBC30065A98E /* MiPushSDK.h */,
 				2BC4EEFE1DBDFDDD00715730 /* RCTMIPushModule.h */,
 				2BC4EEFF1DBDFDDD00715730 /* RCTMIPushModule.m */,
 			);

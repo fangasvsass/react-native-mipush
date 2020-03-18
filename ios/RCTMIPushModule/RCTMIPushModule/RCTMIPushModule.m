@@ -10,6 +10,11 @@
 
 @implementation RCTMIPushModule
 
+- (dispatch_queue_t)methodQueue
+{
+  return dispatch_get_main_queue();
+}
+
 RCT_EXPORT_MODULE();
 
 
@@ -73,7 +78,7 @@ RCT_EXPORT_METHOD(getAllTopic :(RCTPromiseResolveBlock)resolve
 
 + (void)application:(id)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    [MiPushSDK registerMiPush:self];
+    [MiPushSDK registerMiPush:self type:0 connect:YES];
     NSLog(@"注册");
 }
 
